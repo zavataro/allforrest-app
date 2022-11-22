@@ -6,16 +6,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { RouterModule, Routes } from '@angular/router';
 
-import { ToolbarComponent } from './toolbar/toolbar.component';
-import { RegistrationComponent } from './registration/registration.component';
-import { LoginComponent } from './login/login.component';
+import { ToolbarComponent } from './shared/toolbar.component';
+import { LoginComponent } from './auth/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    RegistrationComponent,
     LoginComponent
   ],
   imports: [
@@ -23,7 +21,6 @@ import { LoginComponent } from './login/login.component';
     BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/', pathMatch: 'full' },
-      { path: 'register', component: RegistrationComponent },
       { path: 'login', component: LoginComponent },
 
     ]),
